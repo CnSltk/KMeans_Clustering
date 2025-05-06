@@ -7,25 +7,30 @@ public class Cluster {
 
     public Cluster(Point initialCentroid) {
         this.centroid = initialCentroid;
-        this.points = new ArrayList<Point>();
+        this.points = new ArrayList<>();
     }
-    public void addPoint(Point point) {
-        points.add(point);
+
+    public void addPoint(Point p) {
+        points.add(p);
     }
-    public void cleaPoints() {
+
+    public void clearPoints() {
         points.clear();
     }
+
     public Point calculateCentroid() {
-        if(points.isEmpty()) return centroid;
-        Point newCentroid = Point.mean(points.toArray(new Point[0]));
-        return newCentroid;
+        if (points.isEmpty()) return centroid;
+        return Point.mean(points.toArray(new Point[0]));
     }
+
     public Point getCentroid() {
         return centroid;
     }
+
     public void setCentroid(Point centroid) {
         this.centroid = centroid;
     }
+
     public List<Point> getPoints() {
         return points;
     }
