@@ -11,7 +11,7 @@ public class Point {
     public double[] getCoordinates() {
         return coordinates;
     }
-
+        //calculate distance between points
     public static double euclideanDistance(Point p1, Point p2) {
         double sum = 0.0;
         for (int i = 0; i < p1.coordinates.length; i++) {
@@ -19,7 +19,7 @@ public class Point {
         }
         return Math.sqrt(sum);
     }
-
+        //calculate the mean of several points
     public static Point mean(Point[] points) {
         int dimensions = points[0].coordinates.length;
         double[] mean = new double[dimensions];
@@ -33,7 +33,7 @@ public class Point {
         }
         return new Point(mean);
     }
-
+        //id clusters to reach them more easily
     public void setClusterId(int id) {
         this.clusterId = id;
     }

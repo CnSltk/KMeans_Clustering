@@ -13,7 +13,7 @@ public class Helper {
                 minDist = d;
                 ties.clear();
                 ties.add(i);
-            } else if (Math.abs(d - minDist) < 1e-9) {
+            } else if (d == minDist) {
                 ties.add(i);
             }
         }
